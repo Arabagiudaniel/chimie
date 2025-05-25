@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chimia Vizuală</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0f2b;
+      color: white;
+      height: 100%;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: #0d0f2b; /* fundal închis pentru contrast */
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 30px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff;
+    }
+
+    h2 {
+      color: #ffcc00;
+      margin-top: 40px;
+    }
+
+    .reaction {
+      text-align: center;
+      font-size: 2em;
+      margin: 20px 0;
+      color: #00ffcc;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00ffcc; }
+      to { text-shadow: 0 0 25px #00ffff; }
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1.1em;
+    }
+
+    a {
+      transition: box-shadow 0.3s ease;
+    }
+    a:hover {
+      box-shadow: 0 0 25px #00ffff;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="background"></canvas>
+
+<div class="container">
+  <h1>Chimia Vizuală</h1>
+
+  <p>Acest proiect prezintă o sesiune virtuală de învățare în care elevii pot explora o clasă 3D interactivă. Aceasta include un tabel periodic, un perete informativ despre compuși ionici și covalenți și o animație a reacției chimice CH₄ + 2O₂ → CO₂ + 2H₂O.</p>
+
+  <div class="reaction">CH₄ + 2O₂ → CO₂ + 2H₂O</div>
+
+  <h2>➡️ Alcani</h2>
+  <p>Alcanii sunt hidrocarburi saturate, adică molecule formate doar din atomi de carbon și hidrogen, în care toți atomii de carbon sunt legați prin legături simple. Formula generală este C<sub>n</sub>H<sub>2n+2</sub>. Exemplu: metanul (CH₄).</p>
+
+  <h2>➡️ Alchene</h2>
+  <p>Alchenele sunt hidrocarburi nesaturate care conțin cel puțin o legătură dublă între doi atomi de carbon. Formula generală este C<sub>n</sub>H<sub>2n</sub>. Acestea sunt mai reactive decât alcanii. Exemplu: etena (C₂H₄).</p>
+
+  <h2>➡️ Compuși Ionici</h2>
+  <p>Compușii ionici se formează prin transferul de electroni între atomi (de obicei între un metal și un nemetal). Se formează ioni pozitivi și negativi care se atrag. Exemplu: NaCl.</p>
+
+  <h2>➡️ Compuși Covalenți</h2>
+  <p>Compușii covalenți se formează prin partajarea electronilor între atomi, în special între nemetale. Exemplu: molecula de apă (H₂O), unde atomii de hidrogen împart electroni cu oxigenul.</p>
+
+  <h2>➡️ Reacția CH₄ + 2O₂ → CO₂ + 2H₂O</h2>
+  <p>Aceasta este o reacție de combustie a metanului. Metanul (CH₄), un alcan, reacționează cu oxigenul (O₂) și produce dioxid de carbon (CO₂) și apă (H₂O), eliberând energie sub formă de căldură și lumină. Este un exemplu excelent de reacție exergonică și este relevantă pentru înțelegerea efectului de seră și arderii combustibililor fosili.</p>
+
+  <h2>🔽 Descarcă Proiectul</h2>
+  <p>Poți descărca sesiunea virtuală de învățare în format executabil pentru Windows de la următorul link:</p>
+  <p style="text-align:center; margin: 20px 0;">
+    <a href="https://mega.nz/file/KVQhTDpR#ROSAs63ecWCIwz2ENqWtHEaNU4ofNoc_ruG8I-l1IvQ" target="_blank" style="background-color:#00ffff; color:#000; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: bold; box-shadow: 0 0 15px #00ffff;">📥 Descarcă Proiectul</a>
+  </p>
+
+  <h2>💻 Cerințe de Sistem</h2>
+
+  <h3>MINIMUM:</h3>
+  <ul>
+    <li>OS: Windows 7/8.1/10 (32-bit versions)</li>
+    <li>Procesor: Intel Core Duo E6600 @ 2.4GHz</li>
+    <li>Memorie: 2 GB RAM</li>
+    <li>Grafică: Intel 4400, GeForce GT 8800, AMD Radeon HD 4650</li>
+    <li>DirectX: Versiunea 11</li>
+    <li>Stocare: 1 GB spațiu liber</li>
+    <li>Placă de sunet: Compatibilă cu Windows</li>
+  </ul>
+
+  <h3>RECOMANDAT:</h3>
+  <ul>
+    <li>OS: Windows 7/8.1/10 (64-bit versions)</li>
+    <li>Procesor: i5-2500k @ 3.3GHz, AMD FX 6300 3.5GHz</li>
+    <li>Memorie: 4 GB RAM</li>
+    <li>Grafică: GeForce GTX 750, AMD R7 370</li>
+    <li>DirectX: Versiunea 11</li>
+    <li>Stocare: 1 GB spațiu liber</li>
+    <li>Placă de sunet: Compatibilă cu Windows</li>
+  </ul>
+</div>
+
+<script>
+const canvas = document.getElementById("background");
+const ctx = canvas.getContext("2d");
+
+let w, h, particles = [];
+
+function resize() {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resize);
+resize();
+
+function createParticles(n) {
+  particles = [];
+  for (let i = 0; i < n; i++) {
+    particles.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      dx: (Math.random() - 0.5) * 1.2,
+      dy: (Math.random() - 0.5) * 1.2,
+      r: Math.random() * 3 + 1
+    });
+  }
+}
+createParticles(160);
+
+function draw() {
+  // Fundal
+  ctx.fillStyle = "#0d0f2b";
+  ctx.fillRect(0, 0, w, h);
+
+  for (let i = 0; i < particles.length; i++) {
+    let p = particles[i];
+
+    // Particulă
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = "#00ffff";
+    ctx.fill();
+
+    // Mișcare
+    p.x += p.dx;
+    p.y += p.dy;
+
+    // Reflectare la margini
+    if (p.x < 0 || p.x > w) p.dx *= -1;
+    if (p.y < 0 || p.y > h) p.dy *= -1;
+
+    // Linii între particule apropiate
+    for (let j = i + 1; j < particles.length; j++) {
+      let q = particles[j];
+      let dx = p.x - q.x;
+      let dy = p.y - q.y;
+      let dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 120) {
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(q.x, q.y);
+        ctx.strokeStyle = `rgba(0, 255, 255, ${1 - dist / 120})`;
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
+      }
+    }
+  }
+
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
+
+</body>
+</html>
